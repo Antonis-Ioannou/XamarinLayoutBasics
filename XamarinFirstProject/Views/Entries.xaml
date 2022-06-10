@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirstProject.Views.Entries">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Entry Text="Antonis" MaxLength="50"></Entry>
+            <Entry Placeholder="Name"></Entry>
+            <Entry Placeholder="Name" PlaceholderColor="Red"></Entry>
+            <Entry Text="Antonis" IsReadOnly="True"></Entry>
+            <Entry Text="Antonis" ReturnType="Search"></Entry>
+            <Entry x:Name="txtName"></Entry>
+            <Entry Completed="Entry_Completed"></Entry>
+            <Entry TextChanged="Entry_TextChanged"></Entry>
+            <Label x:Name="lblValue" FontSize="Large" TextColor="Red"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

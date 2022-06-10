@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirstProject.Views.CheckBoxes">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Do you like Xamarin?" FontSize="Large" Grid.Row="0" Grid.Column="0"></Label>
+                <CheckBox x:Name="chkXamarin" IsChecked="True" CheckedChanged="chkXamarin_CheckedChanged" Grid.Row="0" Grid.Column="1"/>
+
+                <Label x:Name="lblMessage" FontSize="Large" TextColor="Blue" Grid.Row="1" Grid.Column="0"/>
+            </Grid>
+
+            <CheckBox x:Name="checkBox"/>
+            <Label Text="Lorem ipsum">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference checkBox},Path=IsChecked}" Value="true">
+                        <Setter Property="FontAttributes" Value="Italic"/>
+                        <Setter Property="FontSize" Value="Large"/>
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

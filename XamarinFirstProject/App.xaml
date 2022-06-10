@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirstProject.App">
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary>
+                <Color x:Key="MainColour">DarkOrange</Color>
+                <Color x:Key="SecondColour">DarkOliveGreen</Color>
+                <Color x:Key="ThirdColour">Black</Color>
+                <Style x:Key="foo" TargetType="Label">
+                    <Setter Property="FontAttributes" Value="Italic,Bold"/>
+                    <Setter Property="TextColor" Value="{StaticResource ThirdColour}"/>
+                </Style>
+            </ResourceDictionary>
+        </ResourceDictionary>        
+    </Application.Resources>
+</Application>

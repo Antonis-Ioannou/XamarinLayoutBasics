@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinFirstProject"
+             x:Class="XamarinFirstProject.Views.ItemInfo">
+
+    <ContentPage.BindingContext>
+        <local:ItemInfoViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout Padding="25,25,25,25">
+            <Label Text="MVVM" TextColor="Blue" FontSize="Header"></Label>
+            
+            <Label Text="Item Name :" FontSize="Large"></Label>
+            <Entry x:Name="txtItemName" Text="{Binding ItemName}" FontSize="Large"></Entry>
+
+            <Label Text="Price :" FontSize="Large"></Label>
+            <Entry x:Name="txtPrice" Text="{Binding ItemPrice}" FontSize="Large"></Entry>
+
+            <Button Text="Save" x:Name="btnSubmit" Command="{Binding SubmitCommand }" BackgroundColor="SkyBlue"></Button>
+            <Label x:Name="lblMessage" FontSize="Large" Text="{Binding Message}"></Label>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
